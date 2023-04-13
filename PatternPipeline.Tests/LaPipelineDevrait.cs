@@ -154,13 +154,19 @@ namespace PatternPipeline.Tests
         {
             var logger = Substitute.For<ILogger>();
             var pipeline = new Pipeline<IEnumerable<string>>(logger);
+            var pipe = CreerPipe(1, new[] { "element1", "element2" });
+            pipe.Executer(Arg.Any<int>()).Returns(new[] { "element1", "element2" });
+
             pipeline
-                .Configurer(_ => _
-                    .Ajouter(CreerPipe(1, 1))
-                    .Ajouter(CreerPipe(1, new [] { "element1", "element2"}))
-                    .AjouterLog(elements =>
-                        $"{elements.Length} elements.")
-                    .Ajouter(CreerPipe(Array.Empty<string>(), new [] { "element1", "element2"})))
+                .Configurer(_ =>
+                {
+                    return _
+                        .Ajouter(CreerPipe(1, 1))
+                        .Ajouter(pipe)
+                        .AjouterLog(elements =>
+                            $"{elements.Length} elements.")
+                        .Ajouter(CreerPipe(Array.Empty<string>(), Array.Empty<string>()));
+                })
                 .Executer();
 
             logger.Received(1).LogInformation("2 elements.");
