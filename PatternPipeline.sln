@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternPipeline", "PatternPipeline\PatternPipeline.csproj", "{4964B923-7184-47A8-905D-FDB86567E7D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternPipeline.Tests", "PatternPipeline.Tests\PatternPipeline.Tests.csproj", "{19AD8E0B-2BF7-424E-A2B7-D458FB9752E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4964B923-7184-47A8-905D-FDB86567E7D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4964B923-7184-47A8-905D-FDB86567E7D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4964B923-7184-47A8-905D-FDB86567E7D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4964B923-7184-47A8-905D-FDB86567E7D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19AD8E0B-2BF7-424E-A2B7-D458FB9752E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19AD8E0B-2BF7-424E-A2B7-D458FB9752E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19AD8E0B-2BF7-424E-A2B7-D458FB9752E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19AD8E0B-2BF7-424E-A2B7-D458FB9752E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
